@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\UserMetal;
 
 class UserController extends Controller
 {
@@ -13,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return 'Fala Metal';
+        return UserMetal::all();
     }
 
     /**
