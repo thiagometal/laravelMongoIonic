@@ -22,9 +22,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        UserMetal::create($request->all());
+        return $request->all();
     }
 
     /**

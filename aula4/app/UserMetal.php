@@ -8,5 +8,5 @@ class UserMetal extends Model
 {
     protected $table = 'user_metal';
 
-    protected $fillable = ['nome', 'favorite_band'];
+    protected $fillable = ['name', 'favorite_band'];
 }
