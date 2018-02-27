@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('user/', 'UserController@index');
 Route::post('user/', 'UserController@create');
+Route::put('user/{id}', 'UserController@update');
+Route::delete('user/{id}', 'UserController@destroy');

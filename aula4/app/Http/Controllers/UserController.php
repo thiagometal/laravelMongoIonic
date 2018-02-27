@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UserMetal;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
@@ -70,7 +71,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        UserMetal::find($id)->update($request->all());
+        
+        return $request->all();
     }
 
     /**
@@ -81,6 +84,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        UserMetal::find($id)->delete();
+        
+        return UserMetal::all();
     }
 }
