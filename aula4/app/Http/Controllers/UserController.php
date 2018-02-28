@@ -15,7 +15,19 @@ class UserController extends Controller
      */
     public function index()
     {
-        return UserMetal::all();
+        $users = UserMetal::all(); 
+        $usersMetal = [];
+        
+        foreach ($users as $user) {
+            $perfil = $user->perfil()->where('id', $user->perfil_id)->first();
+            
+            $tempUser = $user;
+            $tempUser['perfil_name'] = $perfil->name;
+            
+            $usersMetal[] = $tempUser;
+        }
+        
+        return $usersMetal;
     }
 
     /**
