@@ -52,6 +52,6 @@ class PerfilController extends Controller
     {
         Perfil::find($id)->delete();
         
-        return UserMetal::all();
+        return Perfil::all();
     }
 }

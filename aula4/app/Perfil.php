@@ -8,5 +8,5 @@ class Perfil extends Model
 {
     protected $table = 'perfil';
     
-    protected $fillable = ['nome'];
+    protected $fillable = ['name'];
 }
